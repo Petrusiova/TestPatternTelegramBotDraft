@@ -85,7 +85,7 @@ def limited_experience(message):
 
 
 @bot.message_handler(commands=['test_automation_issues'])
-def limited_experience(message):
+def test_automation_issues(message):
     msg = bot.send_message(message.chat.id,
                            text=open('testAutoIssues/testAutoIssues.txt', 'r').read() +
                                 "\n/inefficient_failure_analysis - <b>Неэффективный анализ сбоев</b>\n\n"
