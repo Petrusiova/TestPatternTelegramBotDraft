@@ -521,6 +521,35 @@ def stalled_automation(message):
         bot.send_message(message.chat.id, text=m, parse_mode='html')
 
 
+@bot.message_handler(commands=['whole_team_approach'])
+def stalled_automation(message):
+    m = str(open('whole_team_approach/whole_team_approach.txt', 'r').read() +
+
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')
+
+
+@bot.message_handler(commands=['whole_team_approach_experience'])
+def stalled_automation(message):
+    m = str(open('whole_team_approach/whole_team_approach_experience.txt', 'r').read() +
+
+            "/whole_team_approach - Вернуться назад к разделу <b>Подход всей команды</b>\n"
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')
+
+
 bot.polling(none_stop=True)
 
 # @bot.callback_query_handler(
