@@ -316,7 +316,7 @@ def stalled_automation(message):
                                 "/management_support - <b>Поддержка менеджмента</b> - примените этот шаблон, чтобы получить необходимую поддержку для использования других шаблонов\n\n"
                                 "/sell_the_benefits - <b>Продажа преимуществ</b> - шаблон для тестирования solo без необходимой поддержки\n\n"
                                 "/take_small_steps - <b>Маленькие шаги</b>  - шаблон, чтобы снова начать работу по автоматизации\n\n"
-                                "/test_automation_framework - <b></b> - проверьте, будут ли ваши проблемы решены с помощью этого шаблона\n\n"
+                                "/test_automation_framework - <b>Структура автоматизации</b> - проверьте, будут ли ваши проблемы решены с помощью этого шаблона\n\n"
 
 
                                 "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
@@ -348,8 +348,66 @@ def stalled_automation(message):
                  "/start - Вернуться к началу процесса диагностики")
 
     m = text_1 + "\n" + text_2
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')
 
-    bot.send_message(message.chat.id, text=m, parse_mode='html')
+
+@bot.message_handler(commands=['management_support'])
+def stalled_automation(message):
+    text_1 = str(open('managementSupport/managementSupport.txt', 'r').read() +
+
+                 "\n/set_clear_goals - <b>Установите четкие цели.</b> - Либо просмотрите существующие цели автоматизации, либо встретьтесь с руководителями, чтобы убедиться, что их ожидания реалистичны, адекватно обеспечены ресурсами и финансируются.\n\n" +
+                 "/test_automation_busoness_case - Создайте убедительный <b>Бизнес-кейс автоматизации теста</b> Автоматизация тестирования может быть довольно дорогой и требует, особенно в начале, больших усилий\n\n" +
+                 "/do_a_pilot - <b>Подготовка пилота</b>  - Так руководство сможет «прикоснуться» к преимуществам автоматизации, и его будет проще убедить\n\n" +
+                 "/sell_the_benefits - <b>Продажа преимуществ</b> - После того, как ваш пилот будет успешным, у вас будет гораздо больше шансов получить поддержку\n\n" +
+
+                 "Некоторые предложения по текущей автоматизации тестирования:\n\n"
+
+                 "/test_automation_owner - <b>Ответственный</b> - нужен для мониторинга состояния автоматизации тестирования\n\n"
+                 "/share_information - <b>Поделиться информацией</b> - об автоматизации. Люди вскоре забывают о достигнутых выгодах, поэтому хорошо продолжать напоминать им\n\n"
+                 "/inadequate_support - <b>Недостаток поддержки</b> - возможно, придется освободить некоторых людей от их текущих заданий\n\n"
+                 "/inadequate_tools - <b>Неадекватные инструменты</b> -  вам может потребоваться инвестировать в новые инструменты или создать или пересмотреть \n\n"
+                 "/test_automation_framework - <b>Структура автоматизации</b> \n\n"
+                 "/sell_the_benefits - <b>Продажа преимуществ</b> - может потребоваться чтобы убедить руководство в том, что инвестиции будут полезными\n\n"
+
+                 "Потенциальные проблемы"
+
+                 "Не менее важно сформировать реалистичные ожидания относительно того, что может обеспечить проект автоматизации тестирования\n\n"
+                 "/unrealistic_expectations - <b>Нереалистичные ожидания</b> - \n\n")
+
+    text_2 = str(open('managementSupport/managementSupport_2.txt', 'r').read() +
+
+                 "\n\nПроблемы, решаемые этой схемой:"
+
+                 "/ad_hoc_automation - <b>Интуитивная автоматизация</b>\n\n"
+                 "/automation_decay - <b>Автоматизация распада</b>\n\n"
+                 "/brittle_scripts - <b>Хрупкие сценарии</b>\n\n"
+                 "/data_creep - <b>Скользящие данные</b>\n\n"
+                 "/high_roi_expectations - <b>Ожидание высокой рентабельности</b>\n\n"
+                 "/inadequate_resources - <b>Недостаток ресурсов</b>\n\n"
+                 "/inadequate_support - <b>Недостаток поддержки</b>\n\n"
+                 "/inadequate_tools - <b>Неадекватные инструменты</b>\n\n"
+                 "/no_previous_test_automation - <b>Автоматизации еще не было</b>\n\n"
+                 "/schedule_slip - <b>Скользящее расписание</b>\n\n"
+                 "/script_creep - <b>Скользящий сценарий</b>\n\n"
+                 "/stalled_automation - <b>Автоматизация утеряна</b>\n\n"
+                 "/sut_remake - <b>Переделка SUT</b>\n\n"
+                 "/too_early_automation - <b>Слишком ранняя автоматизация</b>\n\n"
+                 "/unautomatable_test_cases - <b>Тесты не подлежащие автоматизации</b>\n\n"
+                 "/unfocused_automation - <b>Несфокусированная автоматизация</b>\n\n"
+
+                 "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+                 "/start - Вернуться к началу процесса диагностики")
+
+    m = text_1 + "\n" + text_2
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')
 
 
 bot.polling(none_stop=True)
