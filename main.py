@@ -410,6 +410,41 @@ def stalled_automation(message):
         bot.send_message(message.chat.id, text=m, parse_mode='html')
 
 
+@bot.message_handler(commands=['test_automation_owner'])
+def stalled_automation(message):
+    m = str(open('testAutomationOwner/testAutomationOwner.txt', 'r').read() +
+
+            "\n/look_ahead - <b></b> - Либо просмотрите существующие цели автоматизации, либо встретьтесь с руководителями, чтобы убедиться, что их ожидания реалистичны, адекватно обеспечены ресурсами и финансируются.\n\n" +
+            "/look_for_trouble - Создайте убедительный <b>Бизнес-кейс автоматизации теста</b> Автоматизация тестирования может быть довольно дорогой и требует, особенно в начале, больших усилий\n\n" +
+
+            "Другие полезные паттерны:"
+
+            "/celebrate_success - <b>Подготовка пилота</b>  - Так руководство сможет «прикоснуться» к преимуществам автоматизации, и его будет проще убедить\n\n" +
+            "/share_information - <b>Поделиться информацией</b>\n\n"
+            "/management_support - <b>Поддержка менеджмента</b> \n\n"
+
+            "блаблабла"
+
+            "\n\nПроблемы, решаемые этой схемой:"
+
+            "/ad_hoc_automation - <b>Интуитивная автоматизация</b>\n\n"
+            "/automation_decay - <b>Автоматизация распада</b>\n\n"
+            "/localized_regimes - <b>Локализованные режимы</b>\n\n"
+            "/no_previous_test_automation - <b>Автоматизации еще не было</b>\n\n"
+            "/stalled_automation - <b>Автоматизация утеряна</b>\n\n"
+            "/tool_driven_automatio - <b>Автоматизация на основе инструментов</b>\n\n"
+
+
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')
+
+
 bot.polling(none_stop=True)
 
 # @bot.callback_query_handler(
