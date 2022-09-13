@@ -5,64 +5,81 @@ ids = []
 texts = {}
 forms = {}
 
+
 @bot.message_handler(content_types=["new_chat_members"])
 def new_member(message):
-    name = message.new_chat_members[0].first_name
     id = message.new_chat_members[0].id
-    ids.append(id)
+    try:
+        name = message.new_chat_members[0].first_name
 
-    mes_ = bot.send_message(message.chat.id, f"Добро пожаловать, @{name}!"
-                                      f"\nУ нас здесь круто, но есть правило: прежде чем войти, необходимо рассказать о себе"
-                                      f"\nУ тебя 240 секунд")
-    texts[id] = []
-    texts[id].append(mes_.id)
-    mes_ = bot.send_message(message.chat.id, "Как тебя зовут?")
-    texts[id].append(mes_.id)
+        ids.append(id)
+
+        mes_ = bot.send_message(message.chat.id, f"Добро пожаловать, @{name}!"
+                                                 f"\nУ нас здесь круто, но есть правило: прежде чем войти, необходимо рассказать о себе"
+                                                 f"\nУ тебя 240 секунд")
+        texts[id] = []
+        texts[id].append(mes_.id)
+        mes_ = bot.send_message(message.chat.id, "Как тебя зовут?")
+        texts[id].append(mes_.id)
+    except:
+        delete_previous(id, message)
 
 
 @bot.message_handler(content_types=['text'])
 def start(message):
     id = message.from_user.id
-    if message.from_user.id in ids:
-        forms[id] = []
-        forms[id].append(message.text)
-        texts[id].append(message.id)
-        mes_ = bot.send_message(message.chat.id, "Из какого ты подразделения?")
-        texts[id].append(mes_.id)
-    bot.register_next_step_handler(message=message, callback=next_method)
+    try:
+        if message.from_user.id in ids:
+            forms[id] = []
+            forms[id].append(message.text)
+            texts[id].append(message.id)
+            mes_ = bot.send_message(message.chat.id, "Из какого ты подразделения?")
+            texts[id].append(mes_.id)
+        bot.register_next_step_handler(message=message, callback=next_method)
+    except:
+        delete_previous(id, message)
 
 
 @bot.message_handler(content_types=['text'])
 def next_method(message):
     id = message.from_user.id
-    if message.from_user.id in ids:
-        forms[id].append(message.text)
-        texts[id].append(message.id)
-        mes_ = bot.send_message(message.chat.id, "Кем ты работаешь?")
-        texts[id].append(mes_.id)
-    bot.register_next_step_handler(message=message, callback=next_method_2)
+    try:
+        if message.from_user.id in ids:
+            forms[id].append(message.text)
+            texts[id].append(message.id)
+            mes_ = bot.send_message(message.chat.id, "Кем ты работаешь?")
+            texts[id].append(mes_.id)
+        bot.register_next_step_handler(message=message, callback=next_method_2)
+    except:
+        delete_previous(id, message)
 
 
 @bot.message_handler(content_types=['text'])
 def next_method_2(message):
     id = message.from_user.id
-    if message.from_user.id in ids:
-
-        forms[id].append(message.text)
-        texts[id].append(message.id)
-        mes_ = bot.send_message(message.chat.id, "Чем ты увлекаешься?")
-        texts[id].append(mes_.id)
-    bot.register_next_step_handler(message=message, callback=next_method_3)
+    try:
+        if message.from_user.id in ids:
+            forms[id].append(message.text)
+            texts[id].append(message.id)
+            mes_ = bot.send_message(message.chat.id, "Чем ты увлекаешься?")
+            texts[id].append(mes_.id)
+        bot.register_next_step_handler(message=message, callback=next_method_3)
+    except:
+        delete_previous(id, message)
 
 
 @bot.message_handler(content_types=['text'])
 def next_method_3(message):
     id = message.from_user.id
-    if message.from_user.id in ids:
-        forms[id].append(message.text)
-        texts[id].append(message.id)
-        bot.send_message(message.chat.id,
-                         "К нам присоединился(ась) " + str(forms[id][0]) + " из " + str(forms[id][1]) + ", по профессии " + str(forms[id][2]) + " и увлекается "+ (forms[id][3]))
+    try:
+        if message.from_user.id in ids:
+            forms[id].append(message.text)
+            texts[id].append(message.id)
+            bot.send_message(message.chat.id,
+                             "К нам присоединился(ась) " + str(forms[id][0]) + " из " + str(
+                                 forms[id][1]) + ", он(а) работает " + str(forms[id][2]) + " и увлекается " + (
+                             forms[id][3]))
+    finally:
         delete_previous(id, message)
 
 
