@@ -591,6 +591,21 @@ def stalled_automation(message):
         for x in range(0, len(m), 4095):
             bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
     else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+
+
+
+@bot.message_handler(commands=['automate_whats_needed'])
+def stalled_automation(message):
+    m = str(open('automate_whats_needed/automate_whats_needed.txt', 'r').read() +
+
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
         bot.send_message(message.chat.id, text=m, parse_mode='html')
 
 
