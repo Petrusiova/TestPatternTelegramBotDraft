@@ -134,7 +134,7 @@ def localized_regimes(message):
 
                                 + open('localizedRegimes/localizedRegimes.txt', 'r').read() +
 
-                                "\n/design_for_reuse - <b>Проектируйте для переиспользования</b>\n\n"
+                                "\n/design_for_reuse - <b>Проектирование для переиспользования</b>\n\n"
                                 "/dont_reinvent_the_wheel - <b>Не изобретайте колесо</b> - используйте доступные ноу-хау, инструменты и процессы, когда это возможно.\n\n"
                                 "/set_standarts - <b>Стандартизация</b> - установите и следуйте стандартам для артефактов автоматизации\n\n"
                                 "/test_automation_owner - <b>Ответственный</b> - назначьте ответственного за автоматизацию тестирования\n\n"
@@ -568,6 +568,21 @@ def stalled_automation(message):
 @bot.message_handler(commands=['plan_support_activities'])
 def stalled_automation(message):
     m = str(open('plan_support_activities/plan_support_activities.txt', 'r').read() +
+
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+
+
+
+@bot.message_handler(commands=['maintainable_testware'])
+def stalled_automation(message):
+    m = str(open('maintainable_testware/maintainable_testware.txt', 'r').read() +
 
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
             "/start - Вернуться к началу процесса диагностики")
