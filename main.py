@@ -325,7 +325,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['set_clear_goals'])
-def stalled_automation(message):
+def set_clear_goals(message):
     text_1 = str(open('setClearGoals/setClearGoals_1.txt', 'r').read() +
 
                  "\n/share_information - <b>Поделиться информацией</b> - \n\n" +
@@ -356,7 +356,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['management_support'])
-def stalled_automation(message):
+def management_support(message):
     text_1 = str(open('managementSupport/managementSupport.txt', 'r').read() +
 
                  "\n/set_clear_goals Установить четкие цели - Либо просмотрите существующие цели автоматизации, либо встретьтесь с руководителями, чтобы убедиться, что их ожидания реалистичны, адекватно обеспечены ресурсами и финансируются.\n\n" +
@@ -411,7 +411,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['test_automation_owner'])
-def stalled_automation(message):
+def test_automation_owner(message):
     m = str(open('testAutomationOwner/testAutomationOwner.txt', 'r').read() +
 
             "\n/look_ahead - <b>Смотреть вперед</b> - Либо просмотрите существующие цели автоматизации, либо встретьтесь с руководителями, чтобы убедиться, что их ожидания реалистичны, адекватно обеспечены ресурсами и финансируются.\n\n" +
@@ -419,7 +419,7 @@ def stalled_automation(message):
 
             "Другие полезные паттерны:"
 
-            "/celebrate_success - <b>Подготовка пилота</b>  - Так руководство сможет «прикоснуться» к преимуществам автоматизации, и его будет проще убедить\n\n" +
+            "/celebrate_success - <b>Празднуйте успех</b>  - Так руководство сможет «прикоснуться» к преимуществам автоматизации, и его будет проще убедить\n\n" +
             "/share_information - <b>Поделиться информацией</b>\n\n"
             "/management_support - <b>Поддержка менеджмента</b> \n\n"
 
@@ -447,7 +447,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['dedicated_resources'])
-def stalled_automation(message):
+def dedicated_resources(message):
     m = str(open('dedicatedResources/dedicatedResources.txt', 'r').read() +
 
             "\n/full_time_job - <b>Работа полный день</b> - Проект автоматизации тестирования, возможно, требует больше усилий, чем проект по разработке программного обеспечения\n\n" +
@@ -479,7 +479,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['right_tools'])
-def stalled_automation(message):
+def right_tools(message):
     m = str(open('rightTools/rightTools.txt', 'r').read() +
 
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
@@ -493,7 +493,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['automation_roles'])
-def stalled_automation(message):
+def automation_roles(message):
     m = str(open('automationRoles/automationRoles.txt', 'r').read() +
 
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
@@ -507,7 +507,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['automation_roles_experience'])
-def stalled_automation(message):
+def automation_roles_experience(message):
     m = str(open('automationRoles/automationRole_experience.txt', 'r').read() +
 
             "/automation_roles - Вернуться назад к разделу <b>Роли автоматизации</b>\n"
@@ -522,7 +522,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['whole_team_approach'])
-def stalled_automation(message):
+def whole_team_approach(message):
     m = str(open('whole_team_approach/whole_team_approach.txt', 'r').read() +
 
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
@@ -536,7 +536,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['whole_team_approach_experience'])
-def stalled_automation(message):
+def whole_team_approach_experience(message):
     m = str(open('whole_team_approach/whole_team_approach_experience.txt', 'r').read() +
 
             "/whole_team_approach - Вернуться назад к разделу <b>Подход всей команды</b>\n"
@@ -551,7 +551,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['get_training'])
-def stalled_automation(message):
+def get_training(message):
     m = str(open('get_training/get_training.txt', 'r').read() +
 
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
@@ -566,7 +566,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['plan_support_activities'])
-def stalled_automation(message):
+def plan_support_activities(message):
     m = str(open('plan_support_activities/plan_support_activities.txt', 'r').read() +
 
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
@@ -581,7 +581,7 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['maintainable_testware'])
-def stalled_automation(message):
+def maintainable_testware(message):
     m = str(open('maintainable_testware/maintainable_testware.txt', 'r').read() +
 
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
@@ -596,9 +596,40 @@ def stalled_automation(message):
 
 
 @bot.message_handler(commands=['automate_whats_needed'])
-def stalled_automation(message):
+def automate_whats_needed(message):
     m = str(open('automate_whats_needed/automate_whats_needed.txt', 'r').read() +
 
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+
+
+
+@bot.message_handler(commands=['take_small_steps'])
+def take_small_steps(message):
+    m = str(open('take_small_steps/take_small_steps.txt', 'r').read() +
+
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+
+
+
+@bot.message_handler(commands=['take_small_steps_experience'])
+def take_small_steps(message):
+    m = str(open('take_small_steps/take_small_steps_experience.txt', 'r').read() +
+
+            "/take_small_steps - Вернуться назад к разделу <b>Маленькие шаги</b>\n"
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
             "/start - Вернуться к началу процесса диагностики")
 
