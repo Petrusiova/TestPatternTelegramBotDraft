@@ -60,7 +60,7 @@ def no_previous_test_automation(message):
                                 "/maintainable_testware - <b>Поддерживаемое тестовое обеспечение.</b> Применяйте этот шаблон с самого начала, если вы хотите, чтобы ваши усилия по автоматизации были длительными, а расходы на техническое обслуживание были низкими.\n\n"
                                 "/automate_whats_needed - <b>Автоматизируйте то что нужно.</b> Этот шаблон показывает вам, как выбрать функции, наиболее достойные автоматизации\n\n"
                                 "/take_small_steps - <b>Маленькие шаги</b> Эта модель особенно важна в начале, но ее всегда следует иметь в виду\n\n"
-                                "/unattended_test_execution - <b>Необратимое выполнение теста.</b> Этот шаблон дает вам последние предложения о том, как закончить с автоматизацией тестирования\n\n"
+                                "/unattended_test_execution - <b>Независимое выполнение теста.</b> Этот шаблон дает вам последние предложения о том, как закончить с автоматизацией тестирования\n\n"
 
                                 "/start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
@@ -206,7 +206,7 @@ def lack_of_direction(message):
                                 "Больше причин отсутствия направления:\n\n"
                                 "/inadequate_support - <b>Недостаток поддержки</b> - менеджмент не поддерживает автоматизацию и она выполняется по инициативе 1 человека\n\n"
                                 "/manual_mimicry - <b>Ручная мимикрия</b> - автоматизация ручных кейсов происходит как есть\n\n"
-                                "/independent_test_cases - <b>Взаимозависимые тесты</b> - автоматизация ручных кейсов происходит как есть(2)\n\n"
+                                "/independent_test_cases - <b>Независимые тесты</b> - автоматизация ручных кейсов происходит как есть(2)\n\n"
                                 "/limited_experience - <b>Нет опыта в автоматизации тестирования</b> - тестировщики, занимаясь автоматизацией, не знают как сделать хорошо\n\n"
                                 "/localized_regimes - <b>Локализованные режимы</b> - использование инструментов или архитектура тестового ПО отличается от команды к команде\n\n"
                                 "/unfocused_automation - <b>Несфокусированная автоматизация</b> - важные тесты не были автоматизированы, только простые\n\n"
@@ -626,10 +626,25 @@ def take_small_steps(message):
 
 
 @bot.message_handler(commands=['take_small_steps_experience'])
-def take_small_steps(message):
+def take_small_steps_experience(message):
     m = str(open('take_small_steps/take_small_steps_experience.txt', 'r').read() +
 
             "/take_small_steps - Вернуться назад к разделу <b>Маленькие шаги</b>\n"
+            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "/start - Вернуться к началу процесса диагностики")
+
+    if len(m) > 4095:
+        for x in range(0, len(m), 4095):
+            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
+    else:
+        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+
+
+
+@bot.message_handler(commands=['unattended_test_execution'])
+def unattended_test_execution(message):
+    m = str(open('unattended_test_execution/unattended_test_execution.txt', 'r').read() +
+
             "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
             "/start - Вернуться к началу процесса диагностики")
 
