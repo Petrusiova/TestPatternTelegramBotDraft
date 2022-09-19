@@ -41,7 +41,7 @@ def improve(message):
                                 "Если вы хотите возродить автоматизацию тестирования, то переходите к проблеме:\n\n"
                                 "/stalled_automation - <b>Автоматизация утеряна</b> - чтобы получить обзор возможных шаблонов решения\n\n"
 
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -62,7 +62,7 @@ def no_previous_test_automation(message):
                                 "/take_small_steps - <b>Маленькие шаги</b> Эта модель особенно важна в начале, но ее всегда следует иметь в виду\n\n"
                                 "/unattended_test_execution - <b>Независимое выполнение теста.</b> Этот шаблон дает вам последние предложения о том, как закончить с автоматизацией тестирования\n\n"
 
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -89,7 +89,7 @@ def limited_experience(message):
                                 "/steel_thread - <b>End 2 end</b> - хороший шаблон для обучения автоматизации тестирования через SUT\n\n"
                                 "/prefer_familiar_solutions - <b>Знакомые решения</b> - если члены команды уже используют инструменты или процессы, которые могут быть успешно применены также к проекту автоматизации тестирования.\n\n"
 
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
 
                            , parse_mode='html')
 
@@ -117,7 +117,7 @@ def test_automation_issues(message):
 
                                 "/failure_patterns - <b>Шаблоны отказов</b> - также являются своего рода проблемой, потому что они описывают поведение, которое, если не будет признано вовремя, может поставить под угрозу даже, казалось бы, успешные проекты автоматизации тестирования. Их также называют 'антипаттернами'.\n\n"
 
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
 
                            , parse_mode='html')
 
@@ -144,7 +144,7 @@ def localized_regimes(message):
                                 "/get_training - <b>Обучение для команды</b> - планируйте обучение для всех, кто участвует в проекте автоматизации тестирования\n\n"
                                 "/share_information - <b>Поделиться информацией</b> - запрашивайте и предоставляйте информацию менеджерам, разработчикам, другим тестировщикам и клиентам\n\n"
 
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
 
                            , parse_mode='html')
 
@@ -165,8 +165,8 @@ def lack_of_support(message):
                                 "/inadequate_support - <b>Недостаток поддержки</b> - если вы столкнулись с отсутствием поддержки сразу в нескольких областях\n\n"
 
 
-                                "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /improve - Вернуться к началу улучшения автоматизации тестирования\n"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -188,8 +188,8 @@ def lack_of_resources(message):
                                 "/inadequate_team - <b>Недостаточная команда</b> - никому не было поручено заниматься автоматизацией, это делается отдельно в свободное время\n\n"
 
 
-                                "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /improve - Вернуться к началу улучшения автоматизации тестирования\n"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -212,8 +212,8 @@ def lack_of_direction(message):
                                 "/unfocused_automation - <b>Несфокусированная автоматизация</b> - важные тесты не были автоматизированы, только простые\n\n"
 
 
-                                "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /improve - Вернуться к началу улучшения автоматизации тестирования\n"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -236,8 +236,8 @@ def lack_of_specific_knowledge(message):
                                 "/inadequate_support - <b>Недостаток поддержки</b> - важные тесты не были автоматизированы, только простые\n\n"
 
 
-                                "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /improve - Вернуться к началу улучшения автоматизации тестирования\n"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -252,8 +252,8 @@ def management_expectations_not_met(message):
                                 "/obscure_management_reports - <b>Неясные отчеты</b> - отчеты по автоматизации слишком сложны для анализа\n\n"
                                 "/inefficient_failure_analysis - <b>Неэффективный анализ сбоев</b> - если отчеты о сбоях бесполезны\n\n"
 
-                                "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /improve - Вернуться к началу улучшения автоматизации тестирования\n"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -267,8 +267,8 @@ def automation_exec_expectations_not_met(message):
                                 "/manual_interventions - <b>Ручные вмешательства</b> - автотесты не могут выполняться без присмотра\n\n"
                                 "/inadequate_tools - <b>Неадекватные инструменты</b> - текущие инструменты не могут надежно управлять тестируемым ПО\n\n"
 
-                                "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /improve - Вернуться к началу улучшения автоматизации тестирования\n"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -284,8 +284,8 @@ def automation_maintenance_expectations_not_met(message):
                                 "/obscure_tests - <b>Неясные тесты</b> - документации нет, поэтому с автоматизацией может работать только ее разработчик\n\n"
                                 "/inadequate_revision_control - <b>Неадекватный контроль ревизий</b> - трудно связать автоматизированные скрипты с правильным выпуском тестируемого ПО\n\n"
 
-                                "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /improve - Вернуться к началу улучшения автоматизации тестирования\n"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -320,7 +320,7 @@ def stalled_automation(message):
 
 
                                 "/improve - Вернуться к началу улучшения автоматизации тестирования\n"
-                                "/start - Вернуться к началу процесса диагностики"
+                                "⬅️ /start - Вернуться к началу процесса диагностики"
                            , parse_mode='html')
 
 
@@ -344,15 +344,11 @@ def set_clear_goals(message):
                  "/no_previous_test_automation - <b>Автоматизации еще не было</b>\n\n"
                  "/unrealistic_expectations - <b>Нереалистичные ожидания</b>\n\n"
 
-                 "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-                 "/start - Вернуться к началу процесса диагностики")
+                 "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+                 "⬅️ /start - Вернуться к началу процесса диагностики")
 
     m = text_1 + "\n" + text_2
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['management_support'])
@@ -399,15 +395,11 @@ def management_support(message):
                  "/unautomatable_test_cases - <b>Тесты не подлежащие автоматизации</b>\n\n"
                  "/unfocused_automation - <b>Несфокусированная автоматизация</b>\n\n"
 
-                 "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-                 "/start - Вернуться к началу процесса диагностики")
+                 "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+                 "⬅️ /start - Вернуться к началу процесса диагностики")
 
     m = text_1 + "\n" + text_2
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['test_automation_owner'])
@@ -436,14 +428,10 @@ def test_automation_owner(message):
             "/tool_driven_automation - <b>Автоматизация на основе инструментов</b>\n\n"
 
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['dedicated_resources'])
@@ -468,100 +456,72 @@ def dedicated_resources(message):
             "/schedule_slip - <b>Скользящее расписание</b>\n\n"
             "/hard_to_automate_results - <b>Трудноавтоматизируемые результаты</b>\n\n"
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['right_tools'])
 def right_tools(message):
     m = str(open('rightTools/rightTools.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['automation_roles'])
 def automation_roles(message):
     m = str(open('automationRoles/automationRoles.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['automation_roles_experience'])
 def automation_roles_experience(message):
     m = str(open('automationRoles/automationRole_experience.txt', 'r').read() +
 
-            "/automation_roles - Вернуться назад к разделу <b>Роли автоматизации</b>\n"
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /automation_roles - Вернуться назад к разделу <b>Роли автоматизации</b>\n"
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['whole_team_approach'])
 def whole_team_approach(message):
     m = str(open('whole_team_approach/whole_team_approach.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['whole_team_approach_experience'])
 def whole_team_approach_experience(message):
     m = str(open('whole_team_approach/whole_team_approach_experience.txt', 'r').read() +
 
-            "/whole_team_approach - Вернуться назад к разделу <b>Подход всей команды</b>\n"
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /whole_team_approach - Вернуться назад к разделу <b>Подход всей команды</b>\n"
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')
+    send_message(m, message)
 
 
 @bot.message_handler(commands=['get_training'])
 def get_training(message):
     m = str(open('get_training/get_training.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+    send_message(m, message)\
 
 
 
@@ -569,14 +529,10 @@ def get_training(message):
 def plan_support_activities(message):
     m = str(open('plan_support_activities/plan_support_activities.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+    send_message(m, message)\
 
 
 
@@ -584,14 +540,10 @@ def plan_support_activities(message):
 def maintainable_testware(message):
     m = str(open('maintainable_testware/maintainable_testware.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+    send_message(m, message)\
 
 
 
@@ -599,14 +551,10 @@ def maintainable_testware(message):
 def automate_whats_needed(message):
     m = str(open('automate_whats_needed/automate_whats_needed.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+    send_message(m, message)\
 
 
 
@@ -614,14 +562,10 @@ def automate_whats_needed(message):
 def take_small_steps(message):
     m = str(open('take_small_steps/take_small_steps.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+    send_message(m, message)\
 
 
 
@@ -629,15 +573,11 @@ def take_small_steps(message):
 def take_small_steps_experience(message):
     m = str(open('take_small_steps/take_small_steps_experience.txt', 'r').read() +
 
-            "/take_small_steps - Вернуться назад к разделу <b>Маленькие шаги</b>\n"
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /take_small_steps - Вернуться назад к разделу <b>Маленькие шаги</b>\n"
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
-    if len(m) > 4095:
-        for x in range(0, len(m), 4095):
-            bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
-    else:
-        bot.send_message(message.chat.id, text=m, parse_mode='html')\
+    send_message(m, message)\
 
 
 
@@ -645,9 +585,23 @@ def take_small_steps_experience(message):
 def unattended_test_execution(message):
     m = str(open('unattended_test_execution/unattended_test_execution.txt', 'r').read() +
 
-            "/no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
-            "/start - Вернуться к началу процесса диагностики")
+            "⬅️ /no_previous_test_automation - Вернуться назад к разделу <b>Автоматизации еще не было</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
 
+    send_message(m, message)
+
+
+@bot.message_handler(commands=['tester'])
+def limited_experience(message):
+    m = str(open('tester/tester.txt', 'r').read() +
+
+            "⬅️ /limited_experience - Вернуться назад к разделу <b>Нет опыта в автоматизации тестирования</b>\n"
+            "⬅️ /start - Вернуться к началу процесса диагностики")
+
+    send_message(m, message)
+
+
+def send_message(m, message):
     if len(m) > 4095:
         for x in range(0, len(m), 4095):
             bot.send_message(message.chat.id, text=m[x:x + 4095], parse_mode='html')
